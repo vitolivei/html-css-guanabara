@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos em HTML5</title>
+</head>
+<body>
+
+    <h1>Inserindo videos hospedados localmente</h1>
+    <p>Este vídeo esta hospedado no meu próprio servidor</p>
+
+    <!--modo simples mas pode não rodar em outros navegadores-->
+   <!--<video src="midia/Floresaamarelasaoventos.webm"width="500" controls></video>--> 
+
+
+   <!--este segundo método atende vários navegadores, no entanto a hospedagem pode pezar em trafego pois ex 1000acessos x tamanho do video = trafego -->
+<video width="500" poster="midia/florescapa.png" controls autoplay loop>
+    <source src="midia/1.mp4" type="video/mp4">
+    <source src="midia/Floresaamarelasaoventos.webm" type="video/webm">
+    <source src="midia/floresAamarelasAoVentos.mp4" type="video/mp4">
+    <source src="midia/folhasVerdesSolAoFundo.mp4" type="video/mp4">
+    <p>Seu navegador não tem compatibilidade com reprodução de vídeos</p>
+
+</video>
+    <h1>Inserindo vídeos do youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FdE5G95B7Mg?si=L6CJIs0iaaAJdNDG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h1>Usando vídeos do vimeo</h1>
+    
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/29315013?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Animation Reel"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</body>
+
+
+</html>
