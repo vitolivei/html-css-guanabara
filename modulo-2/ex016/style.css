@@ -1,0 +1,27 @@
+@charset "UTF-8";
+    *   {
+        font-family: Arial, Helvetica, sans-serif;
+        }
+    body{height: 100vh;
+        background-image:linear-gradient(to right, #F1D8C9, #F2C3A7);
+        }
+    
+    main {
+        background-color: white;
+        width: 600px;
+        margin: auto;       /* centraliza */
+        padding: 10px;      /* espaço interno */
+        border-radius: 10px; /* deixa bonito 😎 */
+        border-radius: 10px;/*canto redondo*/
+        box-shadow:10px 10px 10px rgb(224, 165, 165) ;/*sombra na borda*/
+        }
+    p   {
+         text-align: justify;
+        }
+    h1  {color:#F39209; /*fonte*/
+        text-align: center;    
+        text-shadow: 1px 1px 2px black;
+        } 
+    h2  {color:#125189 ;
+
+        }
