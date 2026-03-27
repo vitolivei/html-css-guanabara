@@ -1,4 +1,4 @@
-## Descrição dos módulos:
+## Descrição dos Módulos:
 
 ### Módulo 1:
 
