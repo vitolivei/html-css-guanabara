@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Links</title>
+        <style>
+                /*
+                                             pensa assim
+               # = id
+               . = class
+               : = pseudo-class             :hover → "QUANDO algo acontece"
+               :: = pseudo-element          ::before → "CRIAR algo dentro do elemento"
+               > = clildren
+               pseudo classe(ex: :hover) estilizam um elemento com base no seu estado ou posição, usando um único dois-pontos, 
+               pseud elemento
+                (ex: ::before) estilizam partes específicas de um elemento ou criam novos elementos virtuais, utilizando dois dois-pontos
+                */
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            a{
+                color: rgb(107, 64, 64);
+                text-decoration: none;
+                font-weight: bolder;
+            }/*A:NANANA pseudo classe estado de elemento dentro do html  */
+            a:visited{/*visitado muda de cor*/
+                color: darkred;
+            }
+            a:hover{/*ocultar, mostrar ao passar o mouse*/
+                color: black;
+                text-decoration: underline;
+            }
+            a:active{/*quando clica*/
+                color: yellow;
+            }
+            a::after{/*palavra depois do link*/
+              content: ' ⇐ ' ;
+              
+                /*  content: '[link]';
+               text-decoration: none;
+                font-weight: normal;
+                color: darkgrey;*/
+            }
+            
+            a::before{
+               content:' ⇒ ';
+            }   
+            /* aqui uma opção onde algumas das caraterística acima 
+            formam uma classe 'especial' criando pseudo elements que 
+            permitem adicionar coisas ex setas símbolos 
+                  
+            .especial{
+                background-color:rgb(255,140,140)
+            }
+            .especial::before {
+                content: '⇒ '
+            }
+            .especial::after {
+                content:' ⇐ '
+            }
+            */
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="http://gustavoguanabara.github.io" target="_blank"
+                 >Repositório GitHub</a></li>
+            <!--target="_blank" ABRE EM NOVA ABA-->
+            <li><a href="http://youtube.com/cursoemvideo">Canal YouTube</a></li>
+            <li><a href="http://www.cursoemvideo.com">Site CursoEmVideo</a></li>
+        </ul>
+        
+    </body>
+</html>
