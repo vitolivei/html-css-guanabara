@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="e">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-            background-color: grey;
-        }
-        main{
-            background-color: white;
-            padding: 20;
-            border-radius: 10;
-
-            min-width: 200px;
-            max-width: 800px;
-        }
-        img{
-            width: 100%;
-        }
-
-    </style>
-    <title>Testando Responsividade</title>
-</head>
-<body>
-    <main>
-        <h1>Testando Responsividade</h1>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda asperiores dignissimos hic adipisci, magni omnis repudiandae enim doloremque eligendi, praesentium, natus repellendus nemo minus deleniti nobis! Numquam atque maiores aspernatur.
-        <picture source media"(max-width:600px)"><img src="imagens/irina-blok.jpg" alt="Irina"></picture>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid eos illum deleniti sequi porro alias fugiat iure incidunt enim. Quasi illo vel voluptatem architecto placeat perspiciatis sequi officiis nihil animi?</p>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: grey;
+            }
+            main{
+                background-color: white;
+                padding: 20;
+                border-radius: 10px;
+                font-size: 20px;
+                min-width: 280px;
+                max-width: 1380px;
+                margin: auto;
+            }
+            img{
+                width: 100%;/*encaixa 100% da largura*/
+            }
+            p{ padding: 5px;
+                text-indent: 30px;
+            }
+        </style>
+        <title>Testando Responsividade</title>
+    </head>
+    <body>
+        <main>
+                <h1>Testando Responsividade</h1>
+            <p>    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda asperiores dignissimos hic adipisci, magni omnis repudiandae enim doloremque eligendi, praesentium, natus repellendus nemo minus deleniti nobis! Numquam atque maiores aspernatur.
+            </p>
+            <!--troca a foto quando diminui a tela--!>
+            <picture>
+                <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+                <img src="imagens/irina-blok.jpg" alt="Irina">
+            </picture>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid eos illum deleniti sequi porro alias fugiat iure incidunt enim. Quasi illo vel voluptatem architecto placeat perspiciatis sequi officiis nihil animi?</p>
+        </main>
+    </body>
 </html>
