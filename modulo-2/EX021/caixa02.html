@@ -1,109 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grouping Tags</title>
-    <style>
-        body{font-family: Arial, Helvetica, sans-serif;
-            background-color: dimgray;
-        }
-        header{
-            background-color: white;
-            padding: 10px;
-            margin: 10px;
-        nav{
-            background-color: rgb(207, 205, 205);
-            padding: 3px;
-           box-shadow: 3px -2px 2px 0px rgba(0, 0, 0, 0.623);/*no dev tools voce pode testar a sombra e copiar os parâmetros*/
-        }
-        nav > a{
-            text-decoration: none;
-            color: white;
-            font: bold;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 33px;
-            box-shadow: 3px -2px 2px 0px rgb(94, 107, 83);
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grouping Tags</title>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif;
+                background-color: dimgray;
+            }
+            header{
+                background-color: white;
+                padding: 10px;
+                margin: 10px;
+            }
+            nav{
+                background-color: rgb(207, 205, 205);
+                padding: 3px;
+            box-shadow: 3px -2px 2px 0px rgba(0, 0, 0, 0.623);/*no dev tools voce pode testar a sombra e copiar os parâmetros*/
+            }
+            nav > a{
+                text-decoration: none;
+                color: white;
+                font: bold;
+                text-decoration: none;
+                font-weight: bold;
+                margin-right: 33px;
+                box-shadow: 3px -2px 2px 0px rgb(94, 107, 83);
+                
+            }
+            h1{
+                color: rgb(28, 25, 30);
+                box-shadow: 3px -2px 2px 0px rgba(0, 0, 0, 0.576);
+                text-shadow: 2px 2px 5px black;/*sombra de texto*/
+            }    
             
-        }
-        h1{
-            color: rgb(28, 25, 30);
-            box-shadow: 3px -2px 2px 0px rgba(0, 0, 0, 0.576);
-            text-shadow: 2px 2px 5px black;/*sombra de texto*/
-        }    
-        }
-        main{
-            background-color: white;
-             padding: 10px;
-            margin: 15px;
-            box-shadow: 3px -2px 2px 0px rgba(0, 0, 0, 0.605);
-            border-radius: 3px;/*bordas arredondadas , com 2 parametros 
-            ajusta bordas diagonais, 4 parametros ajste individual*/
-            box-shadow: 3px -2px 2px 0px rgba(0, 0, 0, 0.623);
-
-        }
-        footer{
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin: 10px;
-        }
-        footer > p{
-            margin: 0;
-
-        }
-        article{
-            background-color: lightgray;
-            padding: 5px;
-        }
-        article > aside{
-            background-color: rgb(241, 239, 239);
-        }
-        div#bola{
-            height: 100px;
-            width: 100px;
-            margin: 10px;
-            background-color: white;
-            border-radius: 50%;
+            main{
+                background-color: white;
+                padding: 10px;
+                margin: 15px;
+                box-shadow: 3px -2px 2px 0px rgba(0, 0, 0, 0.605);
+                border-radius: 3px;/*bordas arredondadas , com 2 parametros 
+                ajusta bordas diagonais, 4 parametros ajste individual*/
+                box-shadow: 3px -2px 2px 0px rgba(0, 0, 0, 0.623);
+            }
+            footer{
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+            }
+            footer > p{
+                margin: 0;
+           }
+            article{
+                background-color: lightgray;
+                padding: 5px;
+            }
+            article > aside{
+                background-color: rgb(241, 239, 239);
+            }
+            div#bola{
+                height: 100px;
+                width: 100px;
+                margin: 10px;
+                background-color: white;
+                border-radius: 50%;
 
 
-        }
-    </style>
-</head>
-<body>
- <header>
-<h1>Meu Site</h1>
-<nav>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-</nav>
- </header>
- <main>
-    <section id="assuntos">
-        <p>Esportes Política Tecnologia</p>
-        <section id="noticias">
-            <article>
-                <h2>
-                    Notícia sobre o Brasil
-                </h2>
-                <aside>
-                  <p>Artigo escrito por Jose Da Silva Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus corrupti a, repudiandae dolor soluta maiores eligendi laudantium. Autem eius sit, necessitatibus libero maiores veritatis repellendus dolorum, exercitationem nisi quo nihil!</p>  
-                </aside>
-            </article>
+            }
+        </style>
+    </head>
+    <body>
+    <header>
+    <h1>Meu Site</h1>
+    <nav>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Esportes Política Tecnologia</p>
+            <section id="noticias">
+                <article>
+                    <h2>
+                        Notícia sobre o Brasil
+                    </h2>
+                    <aside>
+                    <p>Artigo escrito por Jose Da Silva Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus corrupti a, repudiandae dolor soluta maiores eligendi laudantium. Autem eius sit, necessitatibus libero maiores veritatis repellendus dolorum, exercitationem nisi quo nihil!</p>  
+                    </aside>
+                </article>
+            </section>
+
         </section>
+    </main>
+    <footer>
+        <p>Desenvolvido pelo CursoEmVideo</p>
+    </footer>
+    <div id="bola">
+        <img src="favicon.ico" alt="">
 
-    </section>
- </main>
- <footer>
-    <p>Desenvolvido pelo CursoEmVideo</p>
- </footer>
- <div id="bola">
-    <img src="favicon.ico" alt="">
-
- </div>
-</body>
+    </div>
+    </body>
 </html>
