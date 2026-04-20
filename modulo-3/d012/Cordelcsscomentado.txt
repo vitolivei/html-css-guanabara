@@ -1,0 +1,173 @@
+/* ================================
+🎯 RESET GERAL
+Remove margens e espaços padrão do navegador
+👉 Sem isso: o site fica “desalinhado”
+================================ */
+
+* {
+  margin: 0;   /* remove espaço externo padrão */
+  padding: 0;  /* remove espaço interno padrão */
+  }
+
+/* ================================
+🌐 HTML E BODY
+================================ */
+html, body {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* 👉 define a fonte padrão do site */
+
+min-height: 100vh;
+/* 👉 faz o site ocupar a tela toda */
+
+background-color: darkgray;
+/* 👉 fundo cinza do site (área fora das seções) */
+}
+
+/* ================================
+🔲 HEADER (TOPO PRETO)
+================================ */
+header {
+background-color: black;
+/* 👉 cria a faixa preta no topo */
+
+color: white;
+/* 👉 texto branco dentro do header */
+
+text-align: center;
+/* 👉 centraliza título e subtítulo */
+}
+
+/* TÍTULO PRINCIPAL */
+header h1 {
+font-family: 'Passion One', cursive;
+/* 👉 fonte estilizada grande */
+
+padding-top: 50px;
+/* 👉 espaço acima do título */
+
+font-size: 10vw;
+/* 👉 tamanho responsivo (cresce com a tela) */
+
+font-variant: small-caps;
+/* 👉 deixa letras com estilo de título (caps elegante) */
+}
+
+/* SUBTÍTULO */
+header p {
+padding-bottom: 50px;
+/* 👉 espaço abaixo do subtítulo */
+}
+
+/* LINKS */
+header a {
+color: white;
+/* 👉 link branco */
+
+text-decoration: none;
+/* 👉 remove sublinhado padrão */
+}
+
+header a:hover {
+text-decoration: underline;
+/* 👉 aparece linha quando passa o mouse */
+}
+
+/* ================================
+📄 SEÇÕES (TEXTOS DO CORDEL)
+================================ */
+section {
+padding-top: 10vh;
+padding-bottom: 10vh;
+/* 👉 cria espaço grande acima e abaixo de cada bloco */
+
+padding-left: 30px;
+/* 👉 afasta o texto da borda esquerda */
+
+line-height: 2em;
+/* 👉 aumenta espaço entre linhas (melhora leitura) */
+
+font-family: 'Sriracha', cursive;
+/* 👉 fonte estilo manuscrito (cara de cordel) */
+
+font-size: 5vw;
+/* 👉 texto grande e responsivo */
+}
+
+/* ================================
+📜 SEÇÃO NORMAL (FUNDO BRANCO)
+================================ */
+section.normal {
+background-color: white;
+/* 👉 cria bloco branco */
+
+color: black;
+/* 👉 texto escuro */
+}
+
+/* ================================
+🖼️ SEÇÃO COM IMAGEM
+================================ */
+section.imagem {
+background-color: rgba(0, 0, 0, 0.3);
+/* 👉 escurece a imagem para o texto aparecer melhor */
+
+color: white;
+/* 👉 texto branco sobre imagem */
+
+background-size: cover;
+/* 👉 faz imagem ocupar toda a área */
+
+background-attachment: fixed;
+/* 👉 efeito PARALLAX (imagem fica parada) */
+
+box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+/* 👉 escurece bordas internas da imagem */
+}
+
+/* IMAGEM 1 */
+#img01 {
+background-image: url('imagens/background001.jpg');
+/* 👉 define a imagem de fundo */
+
+background-position: right center;
+/* 👉 posiciona imagem à direita */
+}
+
+/* IMAGEM 2 */
+#img02 {
+background-image: url('imagens/background002.jpg');
+/* 👉 segunda imagem */
+}
+
+/* ================================
+📦 TEXTO SOBRE IMAGEM
+================================ */
+section.imagem p {
+display: inline-block;
+/* 👉 faz o fundo acompanhar o tamanho do texto */
+
+padding: 5px;
+/* 👉 cria espaço interno (caixinha do texto) */
+
+background-color: rgba(0, 0, 0, 0.3);
+/* 👉 fundo escuro transparente atrás do texto */
+
+/* 👉 melhora leitura sobre imagem */
+}
+
+/* ================================
+🔻 FOOTER
+================================ */
+footer {
+background-color: black;
+/* 👉 faixa preta final */
+
+color: white;
+/* 👉 texto branco */
+
+text-align: center;
+/* 👉 centraliza */
+
+padding: 10px;
+/* 👉 espaço interno (sem isso fica espremido) */
+}
