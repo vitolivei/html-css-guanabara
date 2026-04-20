@@ -7,7 +7,7 @@ Remove margens e espaços padrão do navegador
 * {
   margin: 0;   /* remove espaço externo padrão */
   padding: 0;  /* remove espaço interno padrão */
-  }
+  }sem este fica uma faixa ao redor onde houver cores
 
 /* ================================
 🌐 HTML E BODY
