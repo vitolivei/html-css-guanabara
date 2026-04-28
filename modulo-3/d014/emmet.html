@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tabela Notas</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: auto;
+        width: 600px;
+      }
+
+      caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      .me {
+        color: white;
+        background-color: #b1b0b0;
+      }
+      thead,tfoot {
+        background-color: #969595;
+        color: white;
+      }
+      .area {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <caption>
+        Notas dos Alunos
+      </caption>
+      <thead>
+        <tr>
+          <!-- cabeça  > * ao mesclar celulas elas tem que ser do mesmo tipo ex th com th e estar dentro do mesmo grupo ex tread tfoot-->
+          <th scope="colgroup" rowspan="2">Area</th>
+          <th scope="colgroup" rowspan ="2">Disciplina</th>
+          <th scope="colgroup" colspan="2">Notas</th>
+          <th scope="colgroup" rowspan="2">Media</th>
+        </tr>
+        <tr>
+          <!-- linha 1 -->
+          
+         <th scope="colgroup">Nota 1</th>
+          
+      <th scope="colgroup">Nota 2</th>
+        </tr>
+        
+
+        </thead>
+          <!-- linha 2 -->
+        <tr>
+          <th scope=" rowgroup" rowspan="3">Exatas</th>
+          <td>Matemática</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <!-- linha 3 -->
+          <td>Química</td>
+          <td>2</td>
+          <td>2</td>          
+          <td>2</td>
+          
+        </tr>
+        <tr>
+          <!-- linha 4 -->
+          <td>Física</td>
+          <td>3</td>
+          <td>3</td>
+          <td>3</td>
+        
+        </tr>
+        <tr>
+          <!-- linha 5 -->
+          <th scope="rowgroup" class="me" colspan="4">Media de Exatas</th>
+          <td class="me">3</td>
+        
+        </tr>
+        <tr>
+          <!-- linha 6 -->
+          <th scope="rowgroup" rowspan="3">Humanas</th>
+          <td>Biologia</td>
+          <td>4</td>
+          <td>4</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <!-- linha 7 -->
+          <td>Geografia</td>
+          <td>5</td>
+          <td>5</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <!-- linha 8 -->
+          <td>História</td>
+          <td>6</td>
+          <td>6</td>
+          <td>6</td>
+          
+        </tr>
+      
+
+      <tfoot>
+          <tr>
+            <!-- rodapé -->
+               <!-- linha 9 -->
+              <th scope="col" colspan="4">Média Humanas</th>
+              <td>4</td>
+          
+          </tr>
+      </tfoot>
+     </table>
+  </body>
+</html>
