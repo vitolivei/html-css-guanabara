@@ -6,29 +6,53 @@
     <title>Estudo Iframe</title>
     <style>
         iframe{
-            width: 600px;
-            height: 600px;
+            width: 95vw;
+            height: 400px;
+           border: 2px solid black;
+        }
+        iframe#tela{
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
         }
         
     </style>
 </head>
 
 <body>
-    <H1>Testando o Uso de Iframe</H1>
+    <h1>Testando o Uso de Iframe</h1>
+
+    <!-- lista de opções de Iframe-->
+     <h1>Faça uma escolha</h1>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et esse quaerat tenetur, modi, adipisci nesciunt optio aliquid accusamus sequi maiores quasi! Quisquam voluptate libero explicabo. Itaque nobis inventore temporibus voluptates.</p>
+        <ul>
+            <li><a href="PaginasExtras/iframe1.html" target="frame">Primeira página</a></li>
+            <li><a href="PaginasExtras/iframe2.html"target="frame">Segunda página</a></li>
+            <li><a href="PaginasExtras/iframe3.html"target="frame">Terceira página</a></li>
+        </ul>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ratione temporibus eum inventore natus magni corporis accusamus distinctio quisquam sunt rerum molestias aliquam, alias maxime enim dignissimos cumque quae facilis.</p>
+
 
     <p>
-        Acessando o Site
-         <iframe
-          src="https://vitolivei.github.io/Mapa/" frameborder="0"></iframe> Vitor Dev para aprender  Mapa de site.
+        Acessando o Site índice com mapa.
+         <iframe id="tela" name="frame"
+          src="" frameborder="0"></iframe> Vitor Dev para aprender  Mapa de site.
     </p>
     <p>
        Também acesse  <iframe src="https://cursoemvideo.com" frameborder="0"></iframe>
     </p>
     <p>
-        <iframe 
-  src="pCelular.html"
-  allowfullscreen>
+        <iframe src="https://vitolivei.github.io/Mapa/" frameborder="0"></iframe>
+    </p>
+    <p>
+        <iframe src="pCelular.html"allowfullscreen>
 </iframe>
     </p>
+    <p>
+        <iframe src="https://google.com" >
+            <p>Infelizmente seu navegador não é compatível</p>
+        </iframe>
+    </p>
+
 </body>
 </html>
