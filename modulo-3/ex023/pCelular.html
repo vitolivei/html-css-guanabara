@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Faz o layout se adaptar ao celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tabela Responsiva Completa</title>
+
+  <style>
+    /* ================================
+       CONFIGURAÇÃO GERAL DA PÁGINA
+    ================================= */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    /* ================================
+       CONTAINER COM SCROLL HORIZONTAL
+       (ESSENCIAL PARA MOBILE)
+    ================================= */
+    .container {
+      overflow-x: auto; /* permite rolar para os lados */
+    }
+
+    /* ================================
+       TABELA
+    ================================= */
+    table {
+      border-collapse: collapse; /* remove espaços entre bordas */
+      min-width: 900px; /* força a tabela a ser larga */
+      margin: auto; /* centraliza */
+    }
+
+    /* TÍTULO DA TABELA */
+
+
+    /* CÉLULAS GERAIS */
+    th, td {
+      border: 1px solid #333;
+      padding: 6px;
+      text-align: center;
+      background: white; /* importante para não ficar transparente */
+    }
+
+    /* ================================
+       CABEÇALHO FIXO (TOPO)
+    ================================= */
+    thead th {
+        
+      position: sticky; /* ativa fixação */
+      top: 0; /* fixa no topo */
+      background: #555;
+      color: white;
+      z-index: 2; /* fica acima das outras células */
+    }
+
+    /* ================================
+       COLUNA ESQUERDA FIXA
+    ================================= */
+    .fixo {
+      position: sticky; /* ativa fixação */
+      left: 0; /* fixa na esquerda */
+      background: #ddd;
+      z-index: 1; /* prioridade menor que o cabeçalho */
+      text-align: left;
+      font-weight: bold;
+    }
+
+    /* ================================
+       CANTO SUPERIOR ESQUERDO
+       (TOP + LEFT AO MESMO TEMPO)
+    ================================= */
+    thead .fixo {
+      z-index: 3; /* maior prioridade (fica acima de tudo) */
+      background: #444; /* cor diferente para destacar */
+    }
+
+    /* ================================
+       EFEITO ZEBRA (LINHAS ALTERNADAS)
+    ================================= */
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    /* garante que o zebra não sobrescreva a coluna fixa */
+    tbody tr:nth-child(even) td:not(.fixo) {
+      background-color: #f2f2f2;
+  
+    }
+    caption {
+  position: sticky; /* ativa fixação */
+  top: 0;           /* gruda no topo */
+  background: #333; /* fundo pra não ficar transparente */
+  color: white;
+  z-index: 4;       /* maior que o thead */
+  padding: 10px;
+}
+  </style>
+</head>
+
+<body>
+<p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro maxime eveniet modi deserunt tempore ad dignissimos eius nam molestiae, quis quia recusandae, repudiandae sint. Dolores libero porro id autem? Tempora?</span><span>Voluptatibus ab sequi blanditiis autem saepe accusantium, itaque quas tempore rerum culpa! Tempore eos quidem quae non autem repudiandae facere ullam. Nihil, atque. Natus, molestiae. Adipisci suscipit minima aperiam labore!</span><span>Ipsum officia, minus deserunt quo vero ratione vitae tenetur excepturi totam qui atque quia maiores sed perspiciatis enim rem voluptate ipsa recusandae unde doloribus repudiandae pariatur quidem. Ab, atque doloribus?</span><span>Dolor minima mollitia fugiat quaerat est quisquam aperiam delectus necessitatibus illum suscipit optio, explicabo adipisci harum quae? Rem tempore quibusdam recusandae placeat, temporibus, ad et eum vitae sed, neque error?</span><span>Veniam voluptas necessitatibus temporibus quas architecto quia aliquam provident. Ratione quisquam aperiam iure architecto officiis suscipit, eveniet, laudantium temporibus in sit consequuntur! Nam delectus ad aliquam, similique ipsa fugiat sit.</span></p>
+  <h1>Tabelas em telas pequenas</h1>
+
+  <!-- CONTAINER COM SCROLL -->
+  <div class="container">
+
+    <table>
+
+      <!-- TÍTULO DA TABELA -->
+      <caption>Tabela Responsiva com Coluna Fixa</caption>
+
+      <!-- ================================
+           CABEÇALHO
+      ================================= -->
+      <thead>
+        <tr>
+          <!-- Essa célula é especial:
+               - fixa no topo
+               - fixa na esquerda
+               - maior z-index -->
+          <th class="fixo">Produto</th>
+
+          <!-- Meses -->
+          <th>Jan</th>
+          <th>Fev</th>
+          <th>Mar</th>
+          <th>Abr</th>
+          <th>Mai</th>
+          <th>Jun</th>
+          <th>Jul</th>
+          <th>Ago</th>
+          <th>Set</th>
+          <th>Out</th>
+          <th>Nov</th>
+          <th>Dez</th>
+        </tr>
+      </thead>
+
+      <!-- ================================
+           CORPO DA TABELA
+      ================================= -->
+      <tbody>
+
+        <tr>
+          <td class="fixo">TV 40"</td>
+          <td>01</td><td>04</td><td>07</td><td>12</td><td>12</td><td>10</td>
+          <td>05</td><td>02</td><td>01</td><td>01</td><td>04</td><td>16</td>
+        </tr>
+
+        <tr>
+          <td class="fixo">Home Theater</td>
+          <td>01</td><td>04</td><td>07</td><td>12</td><td>12</td><td>10</td>
+          <td>05</td><td>02</td><td>01</td><td>01</td><td>04</td><td>16</td>
+        </tr>
+
+        <tr>
+          <td class="fixo">Samsung Galaxy S20</td>
+          <td>01</td><td>04</td><td>07</td><td>12</td><td>12</td><td>10</td>
+          <td>05</td><td>02</td><td>01</td><td>01</td><td>04</td><td>16</td>
+        </tr>
+
+        <tr>
+          <td class="fixo">iPad Mini</td>
+          <td>01</td><td>04</td><td>07</td><td>12</td><td>12</td><td>10</td>
+          <td>05</td><td>02</td><td>01</td><td>01</td><td>04</td><td>16</td>
+        </tr>
+
+        <tr>
+          <td class="fixo">PlayStation 4</td>
+          <td>01</td><td>04</td><td>07</td><td>12</td><td>12</td><td>10</td>
+          <td>05</td><td>02</td><td>01</td><td>01</td><td>04</td><td>16</td>
+        </tr>
+
+        <tr>
+          <td class="fixo">Lava louças</td>
+          <td>01</td><td>04</td><td>07</td><td>12</td><td>12</td><td>10</td>
+          <td>05</td><td>02</td><td>01</td><td>01</td><td>04</td><td>16</td>
+        </tr>
+
+        <tr>
+          <td class="fixo">Amazon Echo</td>
+          <td>01</td><td>04</td><td>07</td><td>12</td><td>12</td><td>10</td>
+          <td>05</td><td>02</td><td>01</td><td>01</td><td>04</td><td>16</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+  <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sed voluptatibus, unde, dolore repudiandae voluptatem autem tenetur illo quae, quidem sunt fuga laboriosam quaerat placeat molestias? Laborum qui impedit officia.</span><span>Corporis officia sit iusto, nam quis similique sed ab eum voluptatem? Recusandae suscipit qui amet quo molestiae eligendi ut, blanditiis, non ipsam ullam hic perferendis, laborum accusamus beatae tenetur cum.</span><span>Reprehenderit provident necessitatibus sit ipsa at odit voluptatum, distinctio quisquam, hic cum enim reiciendis vitae corporis molestiae itaque dolores pariatur unde repellendus modi. Corrupti similique voluptatibus, accusantium soluta quisquam ullam.</span><span>Quaerat voluptate quis dolor labore error soluta. Veniam quisquam vero deleniti pariatur natus consectetur? Accusamus quibusdam vel sint consequuntur, magnam officia itaque quae porro aut ad earum qui libero soluta?</span><span>Illo ratione dolores earum excepturi amet, exercitationem consectetur. Corrupti possimus repudiandae cumque id blanditiis totam inventore deleniti, eaque officia atque ratione fugiat perspiciatis mollitia, minima et temporibus molestiae cum porro.</span></p>
+<p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corporis nesciunt non. Aperiam voluptatum, beatae reprehenderit blanditiis temporibus neque obcaecati aspernatur facilis saepe dignissimos repellat error voluptatibus at, quae rerum?</span><span>Rem facilis enim a numquam fugiat, eaque eveniet accusamus consectetur deserunt est in voluptas culpa nam debitis sequi? Optio magni veritatis laborum facilis iure perferendis eligendi alias molestiae modi enim!</span><span>Accusantium nisi nobis modi numquam dicta eum saepe assumenda corrupti blanditiis exercitationem magni illum sequi, voluptas architecto suscipit ratione provident inventore aliquam ducimus nam voluptatem necessitatibus pariatur dolores. Asperiores, assumenda!</span><span>Reiciendis ab sunt omnis debitis expedita quis similique, dolorem, aliquid ipsa nesciunt alias quia nam. Eum saepe delectus, architecto optio temporibus sapiente, nemo autem sit, voluptates ex quia id distinctio.</span><span>Iusto beatae in laboriosam expedita dolore delectus consectetur! Impedit necessitatibus animi voluptatum earum, corporis magni, rem vel et labore illo fuga eligendi quod tempore veniam. Mollitia vel sequi fugiat sapiente!</span></p>
+</body>
+</html>
+
