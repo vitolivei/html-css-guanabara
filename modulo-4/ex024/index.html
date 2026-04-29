@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo Iframe</title>
+    <style>
+        iframe{
+            width: 95vw;
+            height: 400px;
+           border: 2px solid black;
+        }
+        iframe#tela{
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+        }
+        .erro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+        }       
+    </style>
+</head>
+
+<body>
+    <h1>Testando o Uso de Iframe</h1>
+         <p>Lorem ipsum dolor sit ame consectetur adipisicing elit. Et esse quaerat tenetur, modi, adipisci nesciunt optio aliquid accusamus sequi maiores quasi! Quisquam voluptate libero explicabo. Itaque nobis inventore temporibus voluptates.</p>
+    <!-- lista de opções de Iframe-->
+     <h1>Faça uma escolha</h1>
+    
+        <ul>
+            <li><a href="PaginasExtras/iframe1.html"target="frame">Primeira página</a></li>
+            <li><a href="PaginasExtras/iframe2.html"target="frame">Segunda página</a></li>
+            <li><a href="PaginasExtras/iframe3.html"target="frame">Terceira página</a></li>
+        </ul>
+
+
+<!-- srcdoc voce pode inserir um html paragrafo texto imagem dentro do iframe, ou usar src com link do iframe1 por exmplo -->
+    <p>
+        Acessando o Site de produtos   
+         <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium distinctio culpa! Quod odio laborum officia, magni sed qui libero veniam, officiis, assumenda pariatur nobis dolorum esse ipsa reiciendis ad!</p>
+            <img  src='imagens/vitor.jpg'  width='200' height='250'>"</iframe>
+          
+    </p>
+    <!-- <p>
+       Também acesse  <iframe src="https://cursoemvideo.com" >
+        </iframe> -->
+    </p>
+    <!-- abaixo mais exemplos o google não permite e vai dar erro ,
+     mas também pode ter navegadores que não funcionem  -->
+    <!-- <p>
+        <iframe src="https://vitolivei.github.io/Mapa/" frameborder="0">
+            </iframe>
+    </p>
+    <p>
+        <iframe src="pCelular.html">
+</iframe>
+    </p>
+    <div class="">
+        <iframe  src="https://google.com" >
+
+            <p>Infelizmente seu navegador não é compatível</p>
+        </iframe>
+    </div> -->
+
+</body>
+</html>
