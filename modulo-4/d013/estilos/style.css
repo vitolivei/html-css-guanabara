@@ -11,7 +11,8 @@
     background-color: black;
 }
 body{
-    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;   
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;/* cobrir o tamanho do frame */   
 }
 main{
     height: 100vh;
@@ -37,4 +38,12 @@ section#redes-sociais{
     height: 500px;
     top: 4%;
     left: 92%;
+}
+iframe#tela{
+    position: relative;
+    
+    top: 81px;/* posição imagem home  bico tela top esquerdo */
+    left:23px;
+    width: 269px;
+    height: 471px;
 }
