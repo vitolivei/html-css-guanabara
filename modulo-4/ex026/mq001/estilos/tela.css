@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* Estilos para tela */
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+   font-family: 'Arial', sans-serif;
+   font-size: 1em;
+}
+header{
+    background-color: #b3aeae;
+}
+header > h1 {
+    text-align: center;
+}    
+
+    
+menu ul{
+    list-style: none;/* tira a bolinha  */
+   background-color: grey;
+}
+menu li{  
+    background-color: rgb(93, 90, 90);/* fundo do ícone texto */
+    color: white;
+    display: inline-block;/* links em linha */
+    padding: 10px ; 
+}
+article{
+    width:700px;
+   display: block;
+    margin:auto;/* centraliza o artigo */
+}
+article::after{
+   display: block;
+}   

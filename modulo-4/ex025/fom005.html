@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Exemplo de Formulário</h1>
-    <form action="cadastro.php" method="get" autocomplete="on">
+    <form id="form-cadastro" method="POST" autocomplete="on">
     <fieldset>
       <legend>Sexo</legend><!--  <input type="radio" name="sexo"no caso de 1 alternativa alternativa coloca o mesmo nome no name do botâo -->
       <input type="radio" name="sexo" id="isxmas" value="M"><label for="isxmas">Masculono</label><br>
@@ -32,5 +32,32 @@
       <input type="reset" value="Limpar" />
     </p>
   </form>
+
+  <script>
+    document.getElementById('form-cadastro').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const params = new URLSearchParams();
+        
+        for (let [key, value] of formData.entries()) {
+            params.append(key, value);
+        }
+        
+        // Fazer POST visível no Network
+        fetch('cadastro.html', {
+            method: 'POST',
+            body: new URLSearchParams(params),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+        .catch(() => {}) // Ignorar erro 405 do Live Server
+        .finally(() => {
+            // Redirecionar via GET para exibir dados
+            window.location.href = 'cadastro.html?' + params.toString();
+        });
+    });
+  </script>
   </body>
 </html>

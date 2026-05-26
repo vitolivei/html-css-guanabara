@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário </title>
+</head>
+<body>
+   <h1>Exemplo de Formulário</h1><!-- formulário get tem limite de 3000bytes -->
+   <form id="form-cadastro" method="POST" autocomplete="on">
+    <p>
+        <label for="iest">Estado</label>
+        <select name="estado" id="iest">
+
+          <option value="" selected>--- Escolha ---</option><!-- assim cria escolha no menu -->
+            
+          <optgroup label="Região Sudeste">
+                <option value="MG">Minas Gerais</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option><!-- <option value="SP" selected>São Paulo</option> assim aparece como primeira opção  -->
+            </optgroup>
+
+            <optgroup label="Região Nordeste">
+             <option value="MA">Maranhão</option>
+                <option value="PE">Pernambuco</option>
+                <option value="RN">Rio Grande do Norte</option>
+            </optgroup>
+        </select>
+    </p>
+    <p>
+        <label for="iprof">Profissão</label>
+     <input type="text" name="prof" id="iprof" list="lstprof">
+        <datalist  id="lstprof">
+            <option value="ADM">Administrador</option><!-- assim aprece ADM e Administrador como opção -->
+            <option >Contador</option><!--assim mostra so profissão como opção-->
+            <option value="DEV">Desenvolvedor</option><!-- pode digitar outras profissões que sera adicionado somente para quem digitou  -->
+            <option value="PROF">Professor</option>
+        </datalist>
+    </p>
+    <p>
+       <label for="imag">Mensagem</label> <br>
+       <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+    </p>
+    <p>
+       <input type="submit" value="Enviar">
+       <input type="reset" value="Limpar">
+    </p>
+   </form>
+
+   <script>
+    document.getElementById('form-cadastro').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const params = new URLSearchParams();
+        
+        for (let [key, value] of formData.entries()) {
+            params.append(key, value);
+        }
+        
+        // Fazer POST visível no Network
+        fetch('cadastro.html', {
+            method: 'POST',
+            body: new URLSearchParams(params),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+        .catch(() => {}) // Ignorar erro 405 do Live Server
+        .finally(() => {
+            // Redirecionar via GET para exibir dados
+            window.location.href = 'cadastro.html?' + params.toString();
+        });
+    });
+   </script>
+</body>
+</html>

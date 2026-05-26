@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .resultado {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .campo {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007bff;
+        }
+        .label {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .valor {
+            color: #333;
+            margin-top: 5px;
+            word-break: break-word;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="resultado">
+        <h1>Dados Recebidos (POST)</h1>
+        <div id="dados-container"></div>
+        <a href="javascript:history.back()">Voltar</a>
+    </div>
+
+    <script>
+        // Capturar dados da URL (parâmetros GET)
+        const urlParams = new URLSearchParams(window.location.search);
+        const container = document.getElementById('dados-container');
+
+        if (urlParams.toString()) {
+            let html = '';
+            for (let [key, value] of urlParams.entries()) {
+                html += '<div class="campo">';
+                html += '<span class="label">' + key + ':</span>';
+                html += '<div class="valor">' + decodeURIComponent(value) + '</div>';
+                html += '</div>';
+            }
+            container.innerHTML = html;
+        } else {
+            container.innerHTML = '<div style="color: #dc3545; padding: 20px; text-align: center;">Nenhum dado foi recebido!</div>';
+        }
+    </script>
+</body>
+</html>
