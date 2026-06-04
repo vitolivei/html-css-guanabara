@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <title>Media Query</title>
+
+    <style>
+        #itens {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Meu Site</h1>
+
+    <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+        menu
+    </span>
+
+    <menu id="itens">
+        <ul>
+            <li><a href="#">Opção1</a></li>
+            <li><a href="#">Opção2</a></li>
+            <li><a href="#">Opção3</a></li>
+            <li><a href="#">Opção4</a></li>
+            <li><a href="#">Opção5</a></li>
+        </ul>
+    </menu>
+</header>
+
+<main>
+    <article>
+        <h2>Estudando Media Query</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolor quaerat delectus voluptatum dolores sequi impedit voluptatibus praesentium ipsum, distinctio, voluptates unde! Eius neque reprehenderit possimus officiis ab distinctio tenetur?</p>
+
+        <p>Aspernatur ducimus obcaecati at officia mollitia cum, voluptates tempora magni inventore fugit, harum voluptatibus quidem ratione nemo repellat exercitationem ullam delectus tenetur nostrum, praesentium commodi voluptatum. Magnam vitae voluptatum qui!</p>
+
+        <p>Laboriosam quas animi accusantium et deleniti tenetur corrupti nam aliquam, sequi eaque molestiae aut? Ipsam molestias, excepturi vero illo error a laboriosam id delectus sapiente officia? Saepe corporis temporibus quaerat.</p>
+
+        <p>Quis enim doloribus, necessitatibus eaque ea labore, accusantium natus totam officiis, modi dolore! Labore aliquid ex earum recusandae aut corporis esse dolor culpa harum consequatur quis, dignissimos saepe cupiditate est?</p>
+
+        <p>Enim adipisci, distinctio illum est magni ipsum quisquam error mollitia inventore ab, eveniet nostrum vitae optio consectetur vel nihil dolores explicabo. Saepe, molestiae quidem doloremque aperiam incidunt odio aut quasi!</p>
+    </article>
+</main>
+
+<script>
+    function clickMenu() {
+        let itens = document.getElementById('itens');
+
+        if (getComputedStyle(itens).display == 'none') {
+            itens.style.display = 'block';
+        } else {
+            itens.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
