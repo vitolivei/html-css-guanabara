@@ -1,0 +1,219 @@
+```html
+<!doctype html> <!-- Informa ao navegador que o documento utiliza HTML5 -->
+
+<html lang="pt-br"> <!-- Início do documento HTML e define o idioma como português do Brasil -->
+
+<head> <!-- Cabeçalho da página (configurações invisíveis ao usuário) -->
+
+    <meta charset="UTF-8" /> <!-- Permite caracteres especiais e acentuação -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Faz a página se adaptar corretamente a dispositivos móveis -->
+
+    <link rel="stylesheet" href="estilos/style.css" />
+    <!-- Conecta o arquivo CSS externo -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <!-- Importa os ícones do Google Fonts -->
+
+    <title>Media Query</title>
+    <!-- Título exibido na aba do navegador -->
+
+    <style>
+      /* Esconde o menu quando a página é carregada */
+      #itens {
+        display: none;
+      }
+    </style>
+
+</head>
+
+<body> <!-- Corpo da página -->
+
+    <header> <!-- Cabeçalho do site -->
+
+      <h1>Meu Site</h1> <!-- Título principal -->
+
+      <span
+        id="burguer"
+        class="material-symbols-outlined"
+        onclick="clickMenu()"
+      >
+        menu
+      </span>
+      <!-- Ícone hamburguer que chama a função clickMenu() -->
+
+      <menu id="itens">
+      <!-- Menu de navegação escondido inicialmente -->
+
+        <ul> <!-- Lista não ordenada -->
+
+          <li><a href="#">Opção1</a></li>
+          <li><a href="#">Opção2</a></li>
+          <li><a href="#">Opção3</a></li>
+          <li><a href="#">Opção4</a></li>
+          <li><a href="#">Opção5</a></li>
+
+        </ul>
+
+      </menu>
+
+    </header>
+
+    <main> <!-- Conteúdo principal -->
+
+      <article> <!-- Artigo ou conteúdo -->
+
+        <h2>Estudando Media Query</h2>
+
+        <p>
+          Lorem ipsum...
+        </p>
+
+        <p>
+          Lorem ipsum...
+        </p>
+
+        <p>
+          Lorem ipsum...
+        </p>
+
+        <p>
+          Lorem ipsum...
+        </p>
+
+        <p>
+          Lorem ipsum...
+        </p>
+
+      </article>
+
+    </main>
+
+    <script>
+
+      // Função responsável por abrir e fechar o menu
+
+      function clickMenu() {
+
+        // Obtém o elemento que possui id="itens"
+        let itens = document.getElementById("itens");
+
+        // Verifica se o menu está oculto
+        if (getComputedStyle(itens).display == "none") {
+
+          // Mostra o menu
+          itens.style.display = "block";
+
+        } else {
+
+          // Esconde o menu
+          itens.style.display = "none";
+
+        }
+
+      }
+
+    </script>
+
+</body>
+
+</html>
+```
+
+```css
+@charset "UTF-8";
+/* Define a codificação de caracteres do arquivo CSS */
+
+/* Reset básico */
+* {
+  font-family: Arial, Helvetica, sans-serif; /* Fonte padrão */
+  margin: 0px; /* Remove margens */
+  padding: 0px; /* Remove espaçamentos internos */
+}
+
+/* Configuração do fundo da página */
+body,
+html {
+  background-color: rgb(110, 110, 107);
+}
+
+/* Cabeçalho */
+header {
+  background-color: gray;
+}
+
+/* Título principal */
+header > h1 {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Botão hamburguer */
+#burguer {
+  background-color: rgb(79, 75, 75);
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer; /* Mãozinha ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+#burguer:hover {
+  background-color: rgb(183, 176, 176);
+  color: black;
+}
+
+/* Menu oculto inicialmente */
+menu {
+  display: none;
+}
+
+/* Remove os marcadores da lista */
+menu > ul {
+  list-style-type: none;
+}
+
+/* Links do menu */
+menu > ul > li > a {
+  display: block;
+  padding: 10px;
+  text-decoration: none; /* Remove sublinhado */
+  background-color: rgb(123, 123, 122);
+  color: white;
+  text-align: center;
+  border-top: 2px solid rgb(103, 101, 101);
+}
+
+/* Efeito hover dos links */
+menu > ul > li > a:hover {
+  background-color: rgb(95, 94, 94);
+  color: black;
+}
+
+/* Área principal do conteúdo */
+main {
+  width: 90vw; /* 90% da largura da tela */
+  background-color: white;
+  margin: auto; /* Centraliza */
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Título do artigo */
+article > h2 {
+  padding-bottom: 20px;
+}
+
+/* Parágrafos */
+article > p {
+  text-align: justify; /* Justifica o texto */
+  margin-bottom: 20px;
+  text-indent: 20px; /* Recuo da primeira linha */
+}
+```
